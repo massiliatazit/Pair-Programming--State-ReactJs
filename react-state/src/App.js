@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+  
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import Warning from "./components/WarningSign";
+import MyBadge from "./components/MyBadge";
+import SingleBook from "./components/SingleBook";
+import horror from "./data/horror.json";
+import Books from "./components/Books";
+import BookSearch from "./components/Search";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Warning message="I'm a warning message!"></Warning>
+      <MyBadge color="danger" text="I'm a badge!"></MyBadge>
+      <BookSearch horrorbook={horror}></BookSearch>
+      <Books horrorbook={horror} />
     </div>
   );
 }
-
 export default App;
